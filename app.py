@@ -113,6 +113,11 @@ app = Flask(__name__)
 
 @app.route("/")
 def index():
+    # start_time = int(round(time.time()*1000))
+    # sentence = markov_chain.walk(7)
+    # end_time = int(round(time.time()*1000))
+    # print("\nGenerated sentence in {}ms.".format(end_time-start_time))
+    # return sentence
     return "Noice"
 
 print("Name: ")
@@ -134,6 +139,6 @@ if __name__ == '__main__':
     # markov_chain = MarkovChain(corpus)
     # end_time = int(round(time.time()))
     # print("\nMarkov structure generated in {}s.".format(end_time-start_time))
-    
+
 
     app.run()
