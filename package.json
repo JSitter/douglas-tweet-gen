@@ -1,0 +1,20 @@
+{
+  "name": "douglasadamstweet",
+  "version": "1.0.0",
+  "description": "Douglas Adams Tweet Generator",
+  "main": "index.py",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "start": "python3 index.py"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/JSitter/douglas-tweet-gen.git"
+  },
+  "author": "Justin Sitter",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/JSitter/douglas-tweet-gen/issues"
+  },
+  "homepage": "https://github.com/JSitter/douglas-tweet-gen#readme"
+}
