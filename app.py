@@ -119,6 +119,8 @@ def index():
     print("\nGenerated sentence in {}ms.".format(end_time-start_time))
     return sentence
 
+print("Name: ")
+print(__name__)
 if __name__ == '__main__':
     print(__name__)
     import sys
