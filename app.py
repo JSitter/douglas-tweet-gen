@@ -136,8 +136,10 @@ print("second corpus loaded")
 corpus3 = fw.create_corpus("corpus3.txt")
 print("third corpus loaded")
 corpus4 = fw.create_corpus("corpus4.txt")
+print("fourth corpus loaded")
+corpus5 = fw.create_corpus("corpus5.txt")
 print("last corpus loaded")
-corpus = corpus1 + " " + corpus2
+
 end_time = int(round(time.time()*1000))
 time_delta = end_time - start_time
 print("\nFinished in {}ms.".format(time_delta))
