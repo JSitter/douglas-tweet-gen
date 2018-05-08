@@ -116,4 +116,21 @@ def help():
     return "Hello World!"
 
 if __name__ == '__main__':
+    import sys
+    import filewrangler as fw
+    print("Loading Corpus ...")
+    start_time = int(round(time.time()*1000))
+    corpus = fw.create_corpus("corpus.txt")
+    end_time = int(round(time.time()*1000))
+    time_delta = end_time - start_time
+    print("\nFinished in {}ms.".format(time_delta))
+    
+    print("Creating Markov Chain...")
+    start_time = int(round(time.time()))
+    #Create markovchain datastructure in memory
+    markov_chain = MarkovChain(corpus)
+    end_time = int(round(time.time()))
+    print("\nMarkov chain generated in {}s.".format(end_time-start_time))
+
+
     app.run()
