@@ -123,7 +123,7 @@ def index():
 # print("Name: ")
 # print(__name__)
 # if __name__ == 'app':
-print(__name__)
+app.run()
 import sys
 import filewrangler as fw
 from threading import Thread
@@ -155,4 +155,3 @@ end_time = int(round(time.time()))
 print("\nMarkov structure generated in {}s.".format(end_time-start_time))
 
 
-app.run()
