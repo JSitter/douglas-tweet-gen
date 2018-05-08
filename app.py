@@ -126,9 +126,12 @@ def index():
 print(__name__)
 import sys
 import filewrangler as fw
+from threading import Thread
 print("Loading Corpus ...")
 start_time = int(round(time.time()*1000))
-corpus = fw.create_corpus("corpus.txt")
+corpus1 = fw.create_corpus("first_half_corpus.txt")
+corpus2 = fw.create_corpus("second_half_corpus.txt")
+corpus = corpus1 + " " + corpus2
 end_time = int(round(time.time()*1000))
 time_delta = end_time - start_time
 print("\nFinished in {}ms.".format(time_delta))
