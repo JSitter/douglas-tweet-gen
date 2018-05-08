@@ -122,36 +122,36 @@ def index():
 
 # print("Name: ")
 # print(__name__)
-if __name__ == '__main__':
-    app.run()
-    import sys
-    import filewrangler as fw
-    from threading import Thread
-    print("Loading Corpus ...")
-    start_time = int(round(time.time()*1000))
-    corpus1 = fw.create_corpus("corpus1.txt")
-    print("first corpus loaded")
-    corpus2 = fw.create_corpus("corpus2.txt")
-    print("second corpus loaded")
-    corpus3 = fw.create_corpus("corpus3.txt")
-    print("third corpus loaded")
-    corpus4 = fw.create_corpus("corpus4.txt")
-    print("fourth corpus loaded")
-    corpus5 = fw.create_corpus("corpus5.txt")
-    print("last corpus loaded")
 
-    corpus = corpus1 + corpus2
-    morecorpus = corpus3 + corpus4
+app.run()
+import sys
+import filewrangler as fw
+from threading import Thread
+print("Loading Corpus ...")
+start_time = int(round(time.time()*1000))
+corpus1 = fw.create_corpus("corpus1.txt")
+print("first corpus loaded")
+corpus2 = fw.create_corpus("corpus2.txt")
+print("second corpus loaded")
+corpus3 = fw.create_corpus("corpus3.txt")
+print("third corpus loaded")
+corpus4 = fw.create_corpus("corpus4.txt")
+print("fourth corpus loaded")
+corpus5 = fw.create_corpus("corpus5.txt")
+print("last corpus loaded")
 
-    end_time = int(round(time.time()*1000))
-    time_delta = end_time - start_time
-    print("\nFinished in {}ms.".format(time_delta))
+corpus = corpus1 + corpus2
+morecorpus = corpus3 + corpus4
 
-    print("Creating Markov Chain...")
-    start_time = int(round(time.time()))
-    #Create markovchain datastructure in memory
-    markov_chain = MarkovChain(corpus)
-    end_time = int(round(time.time()))
-    print("\nMarkov structure generated in {}s.".format(end_time-start_time))
+end_time = int(round(time.time()*1000))
+time_delta = end_time - start_time
+print("\nFinished in {}ms.".format(time_delta))
+
+print("Creating Markov Chain...")
+start_time = int(round(time.time()))
+#Create markovchain datastructure in memory
+markov_chain = MarkovChain(corpus)
+end_time = int(round(time.time()))
+print("\nMarkov structure generated in {}s.".format(end_time-start_time))
 
 
