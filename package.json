@@ -16,5 +16,8 @@
   "bugs": {
     "url": "https://github.com/JSitter/douglas-tweet-gen/issues"
   },
-  "homepage": "https://github.com/JSitter/douglas-tweet-gen#readme"
+  "homepage": "https://github.com/JSitter/douglas-tweet-gen#readme",
+  "dependencies": {
+    "flask": "^0.2.10"
+  }
 }

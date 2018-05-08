@@ -109,7 +109,7 @@ class MarkovChain:
         
         return histogram
 
-app = Flask(__name__)
+app = Flask()
 
 @app.route("/")
 def help():
