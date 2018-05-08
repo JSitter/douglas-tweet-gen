@@ -122,8 +122,8 @@ def index():
 
 # print("Name: ")
 # print(__name__)
-
-# app.run()
+if __name__ == "__main__":
+    app.run()
 import sys
 import filewrangler as fw
 from threading import Thread
