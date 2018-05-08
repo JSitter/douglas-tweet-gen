@@ -135,6 +135,6 @@ if __name__ == '__main__':
     # markov_chain = MarkovChain(corpus)
     # end_time = int(round(time.time()))
     # print("\nMarkov structure generated in {}s.".format(end_time-start_time))
-
+    print("fu")
 
     app.run()
