@@ -141,6 +141,7 @@ corpus5 = fw.create_corpus("corpus5.txt")
 print("last corpus loaded")
 
 corpus = corpus1 + corpus2
+morecorpus = corpus3 + corpus4
 
 end_time = int(round(time.time()*1000))
 time_delta = end_time - start_time
