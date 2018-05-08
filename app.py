@@ -113,32 +113,32 @@ app = Flask(__name__)
 
 @app.route("/")
 def index():
-    # start_time = int(round(time.time()*1000))
-    # sentence = markov_chain.walk(7)
-    # end_time = int(round(time.time()*1000))
-    # print("\nGenerated sentence in {}ms.".format(end_time-start_time))
-    # return sentence
-    return "Noice"
+    start_time = int(round(time.time()*1000))
+    sentence = markov_chain.walk(7)
+    end_time = int(round(time.time()*1000))
+    print("\nGenerated sentence in {}ms.".format(end_time-start_time))
+    return sentence
+    # return "Noice"
 
-print("Name: ")
-print(__name__)
-if __name__ == '__main__':
-    # print(__name__)
-    # import sys
-    # import filewrangler as fw
-    # print("Loading Corpus ...")
-    # start_time = int(round(time.time()*1000))
-    # corpus = fw.create_corpus("corpus.txt")
-    # end_time = int(round(time.time()*1000))
-    # time_delta = end_time - start_time
-    # print("\nFinished in {}ms.".format(time_delta))
+# print("Name: ")
+# print(__name__)
+if __name__ == 'app':
+    print(__name__)
+    import sys
+    import filewrangler as fw
+    print("Loading Corpus ...")
+    start_time = int(round(time.time()*1000))
+    corpus = fw.create_corpus("corpus.txt")
+    end_time = int(round(time.time()*1000))
+    time_delta = end_time - start_time
+    print("\nFinished in {}ms.".format(time_delta))
     
-    # print("Creating Markov Chain...")
-    # start_time = int(round(time.time()))
-    # #Create markovchain datastructure in memory
-    # markov_chain = MarkovChain(corpus)
-    # end_time = int(round(time.time()))
-    # print("\nMarkov structure generated in {}s.".format(end_time-start_time))
+    print("Creating Markov Chain...")
+    start_time = int(round(time.time()))
+    #Create markovchain datastructure in memory
+    markov_chain = MarkovChain(corpus)
+    end_time = int(round(time.time()))
+    print("\nMarkov structure generated in {}s.".format(end_time-start_time))
 
 
     app.run()
