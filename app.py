@@ -120,6 +120,7 @@ def index():
     return sentence
 
 if __name__ == '__main__':
+    print(__name__)
     import sys
     import filewrangler as fw
     print("Loading Corpus ...")
