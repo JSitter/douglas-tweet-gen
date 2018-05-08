@@ -1,0 +1,16 @@
+[[source]]
+
+url = "https://pypi.python.org/simple"
+verify_ssl = true
+name = "pypi"
+
+
+[packages]
+
+Flask = "==0.12.2"
+Flask-Cors = "==3.0.3"
+gunicorn = "==19.8.1"
+
+
+[dev-packages]
+
