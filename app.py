@@ -123,7 +123,7 @@ def index():
 # print("Name: ")
 # print(__name__)
 
-app.run()
+# app.run()
 import sys
 import filewrangler as fw
 from threading import Thread
