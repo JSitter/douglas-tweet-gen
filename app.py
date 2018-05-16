@@ -2,6 +2,7 @@ from flask import Flask
 import random
 import time
 import pprint
+from flask_cors import CORS
 
 class MarkovChain:
 
@@ -12,6 +13,8 @@ class MarkovChain:
         '''
 
         self.markov_structure = self.generate_second_order_markov_structure(corpus)
+        self.structure_ready = False
+        self.generating_structure = False
 
     def walk(self, steps):
         '''
@@ -110,6 +113,7 @@ class MarkovChain:
         return histogram
 
 app = Flask(__name__)
+CORS(app)
 
 @app.route("/")
 def index():
