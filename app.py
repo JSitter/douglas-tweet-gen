@@ -122,10 +122,7 @@ def index():
     end_time = int(round(time.time()*1000))
     print("\nGenerated sentence in {}ms.".format(end_time-start_time))
     return sentence
-    # return "Noice"
 
-# print("Name: ")
-# print(__name__)
 if __name__ == "__main__":
     app.run()
 import sys
