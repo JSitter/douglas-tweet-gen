@@ -6,6 +6,8 @@ import sys
 import filewrangler as fw
 from flask_cors import CORS
 
+loading = False
+
 class MarkovChain:
 
     def __init__(self, corpus):
@@ -119,6 +121,8 @@ CORS(app)
 
 @app.route("/")
 def index():
+    if loading:
+        return "Loading..."
     start_time = int(round(time.time()*1000))
     sentence = markov_chain.walk(7)
     end_time = int(round(time.time()*1000))
@@ -127,6 +131,8 @@ def index():
 
 if __name__ == "__main__":
     app.run()
+
+loading = True
 print("Loading Corpus ...")
 start_time = int(round(time.time()*1000))
 corpus1 = fw.create_corpus("corpus1.txt")
@@ -152,6 +158,7 @@ start_time = int(round(time.time()))
 #Create markovchain datastructure in memory
 markov_chain = MarkovChain(corpus)
 end_time = int(round(time.time()))
+loading = False
 print("\nMarkov structure generated in {}s.".format(end_time-start_time))
 
 
